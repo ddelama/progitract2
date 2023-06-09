@@ -1,0 +1,25 @@
+print("""
+Bienvenido a ADIVINA LA PALABRA
+------------------------------------------------------------------
+Lee la canción y escribe la palabra que falta, pon mucha atención
+------------------------------------------------------------------
+""")
+
+contador=0
+while True:
+  print("""I don't want a lot for ---------
+  There is just one thing I need (and I)
+  Don't care about the presents underneath the Christmas tree
+  I don't need to hang my stocking there upon the fireplace
+  Santa Claus won't make me happy with a toy on Christmas Day
+  """)
+  palabra = input("Escribe la palabra que falta: ")
+  contador=contador+1
+  if palabra == ("Christmas"):
+    break
+
+else:
+ 
+  print("Has fallado, vuelve a intentarlo")
+    
+print("¡Felicidades, has ganado! Has hecho: ", contador, "intentos")
