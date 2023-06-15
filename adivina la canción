@@ -1,11 +1,13 @@
+modo=input('Escoge un modo de dificultad: facil, normal o, dificil:')
 print("""
 Bienvenido a ADIVINA LA PALABRA
 ------------------------------------------------------------------
 Lee la canción y escribe la palabra que falta, pon mucha atención
 ------------------------------------------------------------------
 """)
-
+intentos=4
 contador=0
+
 while True:
   print("""I don't want a lot for ---------
   There is just one thing I need (and I)
@@ -15,6 +17,19 @@ while True:
   """)
   palabra = input("Escribe la palabra que falta: ")
   contador=contador+1
+  if modo == 'facil':
+    if palabra != 'Christmas':
+      print ('''
+      ──────────────────────────────────────────
+      Pista: la palabra se repite más veces en el fragmento
+      ──────────────────────────────────────────
+      ''')
+  if modo == 'dificil':
+    if palabra != 'Christmas':
+      intentos=intentos-1
+      print(intentos,'intentos restantes')
+      if intentos == 0:
+        exit('Has perdido')
   if palabra == ("Christmas"):
     break
 
